@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>App de Notas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>App de Notas</h1>
+    </header>
+
+    <div id="notas-container"></div>
+
+    <form id="formulario-nota">
+        <label for="titulo" class="form-label">Título:</label>
+        <input type="text" id="titulo" required class="form-input">
+
+        <label for="contenido" class="form-label">Contenido:</label>
+        <textarea id="contenido" required class="form-input"></textarea>
+
+        <div class="centrar-div">
+            <button type="submit" id="agregar-editar-button" class="form-button" aria-label="Agregar/Editar Nota">Agregar/Editar Nota</button>
+            <button type="button" id="cancelar-edicion" class="form-cancel-button" aria-label="Cancelar Edición">Cancelar Edición</button>
+        </div>
+
+        <div class="centrar-div">
+            <button id="boton_modo">Cambiar Modo Oscuro/Modo Claro</button>
+        </div>
+
+        <div class="clima-seccion">
+            <label for="ciudad" class="form-label">Ciudad para datos meteorológicos:</label>
+            <input type="text" id="ciudad" class="form-input" placeholder="Ej. Buenos Aires">
+            <button type="button" id="obtener-clima-button" class="form-button" aria-label="Obtener Clima">Obtener Clima</button>
+
+            <div id="clima-container" class="clima-container">
+                <!-- Aquí se mostrará la información del clima -->
+            </div>
+        </div>
+    </form>
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</body>
+</html>
